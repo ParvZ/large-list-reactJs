@@ -1,14 +1,12 @@
 
 import './App.css';
-
-import { useState } from 'react'; 
+import React, { useState } from 'react'; 
 import {FixedSizeList as List} from 'react-window';
-import React from 'react';
 import data from './data.json';
 
 
 function App() {
-  var size = 50;
+
   const [searchItem,SetSearchItem] = useState('');
 
   const filteredData = data.filter(val=>{
@@ -41,7 +39,7 @@ function App() {
           width={500}
         >        
         {Row}
-        </List>
+      </List>
 
     </div>
   );
